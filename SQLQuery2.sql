@@ -86,6 +86,85 @@ update employeepayroll
  where e_gender='Female' Group by e_gender
 
 
+ALTER table employeepayroll ADD e_number VARCHAR(20), e_address varchar(20), department varchar(20) 
+
+ UPDATE employeepayroll SET e_number='891866587'
+Where e_name='Sam'
+
+ UPDATE employeepayroll SET e_number='891866547'
+Where e_name='BOb'
+
+ UPDATE employeepayroll SET e_number='891866567'
+Where e_name='Anne'
+
+ UPDATE employeepayroll SET e_number='891866597'
+Where e_name='Julin'
+
+
+ UPDATE employeepayroll SET e_address='kurnool'
+
+  UPDATE employeepayroll SET department='CSE'
+Where e_name='Sam'
+
+UPDATE employeepayroll SET department='CSE'
+Where e_name='BOb'
+
+UPDATE employeepayroll SET department='ME'
+Where e_name='Anne'
+
+UPDATE employeepayroll SET department='ME'
+Where e_name='Julin'
+
+create table employee_pay2(
+num int,
+basicpay int ,
+decuction_pay int,
+taxable_pay int,
+incometax_pay int,
+net_pay int,
+)
+insert into employee_pay2 values(
+1,60000,4000,10000,2000,70000
+);
+
+insert into employee_pay2 values(
+2,65000,4500,1500,23000,75000
+);
+
+insert into employee_pay2 values(
+3,70000,5000,2000,2000,80000
+); 
+
+insert into employee_pay2 values(
+4,80000,5000,3000,3000,85000
+);
+select * from employee_pay2
+select * from employeepayroll
+
+select * from employeepayroll 
+
+Alter Table employee_pay2 drop column num
+ 
+ ALTER table employee_pay2 ADD e_id int
+
+
+ 
+UPDATE employee_pay2 SET e_id=1
+Where basicpay=60000
+
+UPDATE employee_pay2 SET e_id=2
+Where basicpay=65000
+
+UPDATE employee_pay2 SET e_id=3
+Where basicpay=70000
+
+UPDATE employee_pay2 SET e_id=4
+Where basicpay=80000
+
+select * from employeepayroll join employee_pay2
+on employeepayroll.e_id = employee_pay2.e_id
+
+
 
 
 
